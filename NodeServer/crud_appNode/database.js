@@ -2,12 +2,20 @@ const { MongoClient } = require("mongodb");
 const uri = "mongodb://localhost:27017";
 
 const client = new MongoClient(uri);
-client.connect();
+client.connect().then((client) => {
+  console.log("Database created");
+
+  // database name
+  const db = client.db("EcommerceDb");
+
+  // collection name
+  db.createCollection("shoes");
+});
 
 async function shoes() {
   try {
     const dataset = await client
-      .db("Ecommerce")
+      .db("EcommerceDb")
       .collection("shoes")
       .find()
       .toArray();
