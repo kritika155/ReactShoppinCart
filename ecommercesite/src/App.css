@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  width: 100%;
+  height: 23vh;
+  background: cadetblue;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  flex-wrap: wrap;
+}
+h4 {
+  /* width: 100%;
+  margin-left: 27%; */
+}
+.logo {
+  display: flex;
+  align-items: center;
+  /* flex-basis: 28%; */
+  max-width: 100%;
+  height: 87%;
+  max-height: 100%;
+  margin-left: 1%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+nav {
+  width: 100%;
+  position: relative;
+  top: -5%;
+  position: fixed;
+  top: 132px;
+  /* background-color: cadetblue; */
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
   color: white;
+  background-color: cadetblue;
+}
+.active {
+  background-color: #04aa6d;
+}
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+nav ul li:hover {
+  color: red;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+nav ul li {
+  padding-left: 4%;
+}
+.container {
+  width: 100 !important;
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-right: 0 !important;
+  margin-left: 0 !important;
+}
+.parent {
+  background-color: #23424a;
+  padding: 50px;
+  margin: 0 auto;
+  width: 80%;
+  position: relative;
+  top: 40vh;
+}
+.child {
+  background-color: #38cfd9;
+  width: 99%;
+  height: 250px;
+}
+@media screen and (max-width: 600px) {
+  Card {
+    width: 100%;
+    max-width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  Card.Body {
+    width: 100%;
+    max-width: 100%;
+  }
+  .header {
+    position: fixed;
+    z-index: 1000;
+  }
+  nav {
+    position: fixed;
+  }
+  .parent {
+    position: relative;
+    top: 71vh;
+  }
+  /* h4 {
+    width: 100%;
+  } */
+  /* .logo {
+    flex-basis: 79%;
+  } */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 600px) {
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
   }
 }

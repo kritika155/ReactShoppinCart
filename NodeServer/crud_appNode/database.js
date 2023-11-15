@@ -6,7 +6,7 @@ client.connect().then((client) => {
   console.log("Database created");
 
   // database name
-  const db = client.db("EcommerceDb");
+  const db = client.db("Ecommerce");
 
   // collection name
   db.createCollection("shoes");
@@ -15,7 +15,7 @@ client.connect().then((client) => {
 async function shoes() {
   try {
     const dataset = await client
-      .db("EcommerceDb")
+      .db("Ecommerce")
       .collection("shoes")
       .find()
       .toArray();
